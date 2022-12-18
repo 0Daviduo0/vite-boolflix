@@ -1,8 +1,8 @@
 <script>
 import AppHeader from './components/AppHeader.vue'
+import AppSearch from './components/AppSearch.vue';
 import AppMain from './components/AppMain.vue'
 import AppFooter from './components/AppFooter.vue'
-import AppSearch from './components/AppSearch.vue';
 
 import { store } from './store.js';
 
@@ -29,7 +29,7 @@ export default {
   <AppHeader/>
 
   <AppMain/>
-  
+
   <AppFooter/>
  
 </template>
