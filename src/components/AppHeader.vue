@@ -19,17 +19,21 @@ export default{
         console.log(store.MovieSearchAPI_URL);
         console.log(store.searchQuery);
 
-        let searchURL = store.MovieSearchAPI_URL;
+        let movieSearchURL = store.MovieSearchAPI_URL;
+        let seriesSearchURL = store.SeriesSearchAPI_URL;
         let searchElement = store.searchQuery;
         if(searchElement !== ""){
             searchElement = searchElement.replace(/ /g,"+");
-            searchURL += `?${searchElement}`
+            movieSearchURL += `?${searchElement}`;
+            seriesSearchURL += `?${searchElement}`;
         }
-        console.log(searchURL);
+        console.log(movieSearchURL, seriesSearchURL);
 
-        axios.get(searchURL)
+        axios.get(movieSearchURL, seriesSearchURL)
         .then(res => {
-        store.moviesSearchResults = res.data.results;   // i dati vengono importati tramite store.*nome proprietà utilizzata da store e messi all'interno dell'array vuoto 
+            // i dati vengono importati tramite store.*nome proprietà utilizzata da store e messi all'interno dell'array vuoto 
+        store.moviesSearchResults = res.data.results;
+        store.seriesSearchResults = res.data.results;
         })
         .catch(err => {
         console.log("Errors", err)  //mostra eventuali errori nel log della console
@@ -37,6 +41,8 @@ export default{
         
         let MoviesearchResults = store.moviesSearchResults;
         console.log(MoviesearchResults)
+        let SeriessearchResults = store.seriesSearchResults;
+        console.log(SeriessearchResults)
     }
     },
 }
