@@ -66,7 +66,7 @@ header{
     align-items: center;
     padding: 0 50px;
     background-color: black;
-    height: 80px;
+    height: 100px;
 
     .logo{
         color: red;
