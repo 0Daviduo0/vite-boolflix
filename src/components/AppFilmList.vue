@@ -35,7 +35,7 @@ export default {
                     <div class="language">
                             {{ movie.original_language }}
                     </div>
-                    <div class="rating" id="rating">
+                    <div class="rating" id="rating" >
                             {{ movie.vote_average }}
                     </div>
                 </div>

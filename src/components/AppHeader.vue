@@ -63,7 +63,7 @@ export default{
     <header>
 
         <div class="logo">
-            BOOLFLIX
+            <img src="../imgs/boolflix.png" alt="">
         </div>
 
         <AppSearch  @search="getMovies"/>
@@ -81,12 +81,7 @@ header{
     align-items: center;
     padding: 0 50px;
     background-color: black;
-    height: 100px;
-
-    .logo{
-        color: red;
-        font-size: 30px;
-    }
+    height: auto;
 }
 
 </style>
