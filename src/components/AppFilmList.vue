@@ -17,15 +17,15 @@ export default {
 
 <template>
 
-    <section class="filmContainer">
+    <section class="mediaContainer">
         <ul>
-            <li class="filmCardContainer"  v-for="movie in store.moviesSearchResults" :key="movie.id">
+            <li class="mediaCardContainer"  v-for="movie in store.moviesSearchResults" :key="movie.id">
 
-                <div class="movieImg" :style="{ backgroundImage: 'url(' + 'https://image.tmdb.org/t/p/w500' + movie.backdrop_path + ')' }">
+                <div class="mediaImg" :style="{ backgroundImage: 'url(' + 'https://image.tmdb.org/t/p/w500' + movie.backdrop_path + ')' }">
                     
                 </div>
 
-                <div class="filmCard">
+                <div class="mediaCard">
                     <div class="title">
                             {{ movie.title }}
                     </div>
@@ -50,63 +50,7 @@ export default {
 
 <style lang="scss" scoped>
 
-.filmContainer{
-    display: flex;
-    justify-content: center;
-    padding-top: 40px;
-    ul{
-        list-style: none;
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(5, 1fr);
-        grid-column-gap: 40px;
-        grid-row-gap: 40px;
-    }
-
-    .filmCardContainer{
-        position: relative;
-
-        .movieImg{
-            width: 300px;
-            height: 400px;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: -200px;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-        
-        .filmCard{
-            pointer-events: none;
-            background-color: rgba(0, 0, 0, 0.562);
-            color: #fff;
-            width: 300px;
-            height: 400px;
-            display: none;
-            position: absolute;
-            top: 50%;  
-            left: 50%; 
-            transform: translate(-50%, -50%);
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .movieImg:hover{
-            filter: blur(8px);
-        }
-
-        .movieImg:hover + .filmCard{
-            display: flex;
-            flex-direction: column;
-            padding: 30px 30px;
-            font-size: 15px;
-        }
-        
-    }
-        
-
-}
-
+@use '../style/partials/mainMediaStyle.scss';
     
 
 </style>

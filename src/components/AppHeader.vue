@@ -27,13 +27,22 @@ export default{
             movieSearchURL += `?${searchElement}`;
             seriesSearchURL += `?${searchElement}`;
         }
-        console.log(movieSearchURL, seriesSearchURL);
+        console.log("film:", movieSearchURL);
+        console.log("serie:", seriesSearchURL)
 
-        axios.get(movieSearchURL, seriesSearchURL)
+        axios.get(movieSearchURL)
         .then(res => {
             // i dati vengono importati tramite store.*nome proprietà utilizzata da store e messi all'interno dell'array vuoto 
-        store.moviesSearchResults = res.data.results;
-        store.seriesSearchResults = res.data.results;
+            store.moviesSearchResults = res.data.results;
+        })
+        .catch(err => {
+        console.log("Errors", err)  //mostra eventuali errori nel log della console
+        });
+
+        axios.get(seriesSearchURL)
+        .then(res => {
+            // i dati vengono importati tramite store.*nome proprietà utilizzata da store e messi all'interno dell'array vuoto 
+            store.seriesSearchResults = res.data.results;;
         })
         .catch(err => {
         console.log("Errors", err)  //mostra eventuali errori nel log della console

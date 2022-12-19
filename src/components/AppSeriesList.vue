@@ -17,15 +17,20 @@ export default {
 
 <template>
 
-    <section class="seriesContainer">
+    <section class="mediaContainer">
         <ul>
-            <li class="seriesCardContainer"  v-for="serie in store.seriesSearchResults" :key="serie.id">
-                <div class="seriesCard">
+            <li class="mediaCardContainer"  v-for="serie in store.seriesSearchResults" :key="serie.id">
+
+                <div class="mediaImg" :style="{ backgroundImage: 'url(' + 'https://image.tmdb.org/t/p/w500' + serie.backdrop_path + ')' }">
+                    
+                </div>
+
+                <div class="mediaCard">
                     <div class="title">
-                        {{ serie.title }}
+                        {{ serie.name }}
                     </div>
                     <div class="original-title">
-                        {{ serie.original_title }}
+                        {{ serie.original_name }}
                     </div>
                     <div class="language">
                         {{ serie.original_language }}
@@ -43,8 +48,10 @@ export default {
 
 <style lang="scss" scoped>
 
-.seriesContainer{
-    color: aqua;
+@use '../style/partials/mainMediaStyle.scss';
+
+.mediaContainer{
+    padding-top: 100px;
 }
 
 </style>
