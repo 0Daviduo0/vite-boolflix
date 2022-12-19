@@ -40,9 +40,9 @@ export default{
         });
         
         let MoviesearchResults = store.moviesSearchResults;
-        console.log(MoviesearchResults)
+        console.log(MoviesearchResults);
         let SeriessearchResults = store.seriesSearchResults;
-        console.log(SeriessearchResults)
+        console.log(SeriessearchResults);
     }
     },
 }
