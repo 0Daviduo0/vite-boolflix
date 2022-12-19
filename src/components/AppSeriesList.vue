@@ -32,11 +32,9 @@ export default {
                     <div class="original-title">
                         {{ serie.original_name }}
                     </div>
-                    <div class="language">
-                        {{ serie.original_language }}
-                    </div>
-                    <div class="rating">
-                        {{ serie.vote_average }}
+                    <div class="language_rating">
+                        <img class="flag" :src="'../../src/imgs/flags/' + serie.original_language + '.svg'" alt="">
+                        <span class="star" v-for="n in 5" :key="n"> {{ n <= Math.ceil(serie.vote_average) / 2 ? '⭐' : '&#9734' }}</span>
                     </div>
                 </div>
             </li>

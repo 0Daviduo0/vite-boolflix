@@ -37,6 +37,13 @@
             transform: translate(-50%, -50%);
             border-radius: 10px;
             overflow: hidden;
+
+            .language_rating{
+                .flag{
+                    width: 20px;
+                    margin-right: 20px;
+                }
+            }
         }
 
         .mediaImg:hover{
