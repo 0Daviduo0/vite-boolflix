@@ -72,22 +72,34 @@ export default {
             background-repeat: no-repeat;
             background-size: cover;
             background-position: -200px;
-            
+            border-radius: 10px;
+            overflow: hidden;
         }
         
         .filmCard{
+            pointer-events: none;
+            background-color: rgba(0, 0, 0, 0.562);
+            color: #fff;
+            width: 300px;
+            height: 400px;
             display: none;
             position: absolute;
-            top: 0;
-
+            top: 50%;  
+            left: 50%; 
+            transform: translate(-50%, -50%);
+            border-radius: 10px;
+            overflow: hidden;
         }
 
         .movieImg:hover{
-            filter: grayscale(100%), blur(100px);
+            filter: blur(8px);
         }
 
-        .movieImg:hover > .filmCard{
-            display: block;
+        .movieImg:hover + .filmCard{
+            display: flex;
+            flex-direction: column;
+            padding: 30px 30px;
+            font-size: 15px;
         }
         
     }
