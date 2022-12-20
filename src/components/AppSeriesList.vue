@@ -22,8 +22,8 @@ export default {
         <ul>
             <li class="mediaCardContainer"  v-for="serie in store.seriesSearchResults" :key="serie.id">
 
-                <div class="mediaImg" :style="{ backgroundImage: 'url(' + 'https://image.tmdb.org/t/p/w500' + serie.backdrop_path + ')' }">
-                    
+                <div class="mediaImg">
+                    <img class="mediaThumb" :src=" 'https://image.tmdb.org/t/p/w500' + serie.backdrop_path " alt="">
                 </div>
 
                 <div class="mediaCard">

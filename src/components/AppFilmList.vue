@@ -21,9 +21,8 @@ export default {
         <ul>
             <li class="mediaCardContainer" v-for="movie in store.moviesSearchResults" :key="movie.id">
 
-                <div class="mediaImg"
-                    :style="{ backgroundImage: 'url(' + 'https://image.tmdb.org/t/p/w500' + movie.backdrop_path + ')' }">
-
+                <div class="mediaImg">
+                    <img class="mediaThumb" :src=" 'https://image.tmdb.org/t/p/w500' + movie.backdrop_path " alt="">
                 </div>
 
                 <div class="mediaCard">
