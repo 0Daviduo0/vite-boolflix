@@ -50,4 +50,8 @@ export default {
 
 @use '../style/partials/mainMediaStyle.scss';
 
+.mediaContainer{
+    padding-top: 100px;
+}
+
 </style>

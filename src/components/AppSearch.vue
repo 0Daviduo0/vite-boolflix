@@ -32,6 +32,7 @@ import { store } from '../store.js';
     background-color: #000;
     color: #fff;
     border-bottom: #fff 1px solid;
+    font-size: 25px;
 }
 
 #searchbarButton{
