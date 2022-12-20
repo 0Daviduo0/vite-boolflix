@@ -18,7 +18,7 @@ import { store } from '../store.js';
     <div class="searchContainer">
         <form>
             <input type="text" name="searchbar" id="searchbar" v-model="store.searchQuery">
-            <button type="submit" @click.prevent="$emit('search')">Search</button>
+            <button id="searchbarButton" type="submit" @click.prevent="$emit('search')">🔎</button>
         </form>
     </div>
 
@@ -27,30 +27,19 @@ import { store } from '../store.js';
 
 <style lang="scss" scoped>
 
-    .filter-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-bottom: 80px;
-    }
+#searchbar{
+    border: none;
+    background-color: #000;
+    color: #fff;
+    border-bottom: #fff 1px solid;
+}
 
-    .counter{
-        background-color: rgba(255, 255, 255, 0.342);
-        padding: 3px 10px;
-        margin-left: 10px;
-        border-radius: 10px;
-        overflow: hidden;
-        color: #fff;
-        font-weight: 700;
-    }
-
-    #status{
-        background-color: rgba(255, 255, 255, 0.342);
-        padding: 3px 10px;
-        border: none;
-        border-radius: 10px;
-        overflow: hidden;
-        font-weight: 700;
-    }
+#searchbarButton{
+    padding-left: 10px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    font-size: 20px;
+}
 
 </style>

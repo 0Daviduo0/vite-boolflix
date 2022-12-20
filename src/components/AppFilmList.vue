@@ -16,8 +16,9 @@ export default {
 
 
 <template>
-
+    
     <section class="mediaContainer">
+
         <ul>
             <li class="mediaCardContainer" v-for="movie in store.moviesSearchResults" :key="movie.id">
 
@@ -48,5 +49,7 @@ export default {
 
 
 <style lang="scss" scoped>
+
 @use '../style/partials/mainMediaStyle.scss';
+
 </style>

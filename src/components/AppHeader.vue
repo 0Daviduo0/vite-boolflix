@@ -79,8 +79,9 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 50px;
+    padding: 10px 50px;
     background-color: black;
+    box-shadow: inset 0px -49px 35px -30px #b5b5b523;
     height: auto;
 }
 

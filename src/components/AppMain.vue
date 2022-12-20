@@ -29,7 +29,7 @@ export default{
 <style lang="scss" scoped>
 
 main{
-    background-color: grey;
+    background-color: black;
     min-height: 800px;
 }
 
